@@ -14,6 +14,7 @@ George,Washington,"111 Independence Ave Washington, DC",444-444-4444,444-444-000
 ```
 
 ### SCRIPT
+```
 ##################################################################################
 ##	Automatically Add Students from Exported CSV from HR ERP Software
 ##		Author: Tanner Blomster
@@ -53,3 +54,4 @@ New-AdUser -Name $name `
 
 Add-ADGroupMember "Students" $name;
 }
+```
