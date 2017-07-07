@@ -12,7 +12,7 @@ The checkbox removes all DNS servers currently on the devices BEFORE applying th
 
 ### WHAT THE USER SEES
 
-![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Cisco%20Prime%20Works/Bulk%20Add%20DNS%20Servers/Form%20View.PNG)
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Production/Projects/Bulk%20Add%20DNS%20Servers/form.PNG)
 
 ### FINAL CODE
 ```
