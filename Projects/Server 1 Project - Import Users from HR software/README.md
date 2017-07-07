@@ -1,5 +1,5 @@
 ### DESCRIPTION
-This is my final project for my CNIT 361 - Workstation and Server course.  We were told to take a script we already written and expand it a little bit.  I wanted a bigger challenge so I made it harder.
+This is my final project for my CNIT 361 - Workstation and Server course.  We were told to take a script we already wrote and expand it a little bit.  I wanted a bigger challenge so I made it harder.
 
 ### SCENERIO
 A small educational organization has an HR department and Active Directory to manage log ins.  The HR software is not compatiable with Active Directory.  Both the HR and IT teams were adding new students in their own respective software applications.  The organization was growing larger and had many mismatches of information between the two systems.  The IT team found out that HR can export a list of new users via *.csv so they decided to make a script to automatically import them.
