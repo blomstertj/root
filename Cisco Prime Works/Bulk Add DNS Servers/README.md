@@ -7,7 +7,7 @@ An additional server can be added
 The checkbox removes all DNS servers currently on the devices BEFORE applying the new server(s)
 
 1. The CLI checks to see if the box was checked to remove all the current servers.  If checked, `no ip name-server` will be ran to remove current servers.
-2. Then it applies the first DNS server using `ip name-server $dns_serv_1` where `$dns_serv_1` is an IPv4 address entered in the box
+2. Then it applies the first DNS server using `ip name-server $dns_serv_1` where `$dns_serv_1` is an IPv4 address entered in the `DNS Server 1` box.
 3. If an IPv4 address is present in the `DNS Server 2` box then it will run `ip name-server $dns_serv_2` where `$dns_serv_2` is the IPv4 address entered.  If there isn't anything in the box, it is skipped.
 
 ### WHAT THE USER SEES
