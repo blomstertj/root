@@ -1,0 +1,14 @@
+#Add 192.168.3.129 /26 to Server A Ethernet 3
+New-NewIPAddress -InterfaceIndex 16 -IPAddress 192.168.3.129 -PrefixLength 26
+#Set DNS Address 192.168.3.129 to ServerA Ethernet 3
+Set-DNSClientServerAddress -InterfaceIndex 16 -ServerAddresses 192.168.3.129
+
+#Add 192.168.3.130 /26 to ServerB Ethernet 3
+Invoke-Command -Computername ServerB {New-NetIPAddress -InterfaceIndex 16 -IPAddress 192.168.3.130 -PrefixLength 26}
+#Set DNS Address 192.168.3.129 to ServerB Ethernet 3
+Invoke-Command -Computername ServerB {Set-DNSClientServerAddress -InterfaceIndex 16 -ServerAddresses 192.168.3.129}
+
+#Add 192.168.3.130 /26 to ServerC Ethernet 3
+Invoke-Command -Computername ServerC {New-NetIPAddress -IntefaceIndex 16 -IPAddress 192.168.3.131 -PrefixLength 26}
+#Set DNS Address 192.168.3.129 to ServerC Ethernet 3
+Invoke-Command -Computername ServerC {Set-DNSClientServerAddress -InterfaceIndex 16 -ServerAddresses 192.168.3.129}
