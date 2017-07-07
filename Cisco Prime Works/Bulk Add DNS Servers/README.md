@@ -15,6 +15,7 @@ The checkbox removes all DNS servers currently on the devices BEFORE applying th
 ![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Cisco%20Prime%20Works/Bulk%20Add%20DNS%20Servers/Form%20View.PNG)
 
 ### FINAL CODE
+```
 #if ( $remove_dns_serv eq "true" )
 		no ip name-server
 	#end
@@ -22,3 +23,4 @@ ip name-server $dns_serv_1
 #if ( $dns_serv_2 != "" )
 		ip name-server $dns_serv_2
 	#end
+```
