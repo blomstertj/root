@@ -1,0 +1,42 @@
+!! For use with DMPVN and access lists to control the remote identity connections.
+
+crypto ikev2 proposal IKEV2-PROPOSAL
+ encryption aes-cbc-256
+ integrity sha256
+ group 21
+ exit
+ 
+crypto ikev2 policy IKEV2-POLICY
+ match fvrf OUTSIDE-WORLD
+ proposal IKEV2-PROPOSAL
+ exit
+
+crypto ikev2 keyring DMVPN-KEYRING
+ peer dmvpn-node
+  address 0.0.0.0 0.0.0.0
+  pre-shared-key castle
+  exit
+ exit
+
+crypto ikev2 profile IKEV2-PROFILE
+ match fvrf OUTSIDE-WORLD
+ match identity remote any
+ match local identity A.B.C.D	! IP Address of the Tunnel 0 interface
+ authentication remote pre-share
+ authentication local pre-share
+ keyring local DMVPN-KEYRING
+ exit
+
+crypto ipsec transform-set TRANS-SET esp-aes 256 esp-sha256-hmac
+ mode transport
+ exit
+
+crypto ipsec profile IKEV2-DMVPN
+ set transform-set TRANS-SET
+ set ikev2-profile IKEV2-PROFILE
+ set security-association lifetime seconds 900
+ exit
+ 
+!! WARNING: WILL LOSE CONNECTION FROM SSH SESSION AFTER RUNNING THIS COMMAND
+interface Tunnel0
+ tunnel protection ipsec profile IKEV2-DMVPN
