@@ -36,7 +36,7 @@ crypto ipsec profile IKEV2-DMVPN
  set ikev2-profile IKEV2-PROFILE
  set security-association lifetime seconds 900
  exit
- 
-!! WARNING: WILL LOSE CONNECTION FROM SSH SESSION AFTER RUNNING THIS COMMAND
+
+
 interface Tunnel0
  tunnel protection ipsec profile IKEV2-DMVPN
