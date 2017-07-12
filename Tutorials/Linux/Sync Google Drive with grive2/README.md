@@ -118,7 +118,8 @@ Then save this to anywhere you want.  (I keep it right in my Google Drive folder
 Now click the Permissons tab and check `“Allow executing file as program”` and then click `Close`
 
 ![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/on_demand_sync_2.png)
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/on_demand_sync_3.png)
 
 Now just double click on this with file and it’ll run in a terminal window then exit when done:
 
-![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/on_demand_sync_3.png)
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/on_demand_sync_4.png)
