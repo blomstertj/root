@@ -86,6 +86,7 @@ You can also edit this using GUI by using
 
 
 ## Fixing a bad tweak after running `sudo powertop --auto-tune`
+
 ###### If you didn’t have any issues from before you can continue to Testing.  If you did have issues after running auto tune then read this section.
 
 If you have any issues with your hardware after running `sudo powertop --auto-tune`.  You can try to run
