@@ -51,6 +51,8 @@ After that is done then run
 
 If all is working after that command great, but check your USB devices, touchpad, keyboard.  For example, I ran this on my desktop to try and lower power consumption and my mouse turned off automatically really fast.  I've never had anything not work right on the laptops I ran it on. If something is unusable like your mouse just reboot. If you know auto tune breaks something you can set it back after using my Fixing section.
 
+#### Note: `auto-tune` sets the VM Writeback Timeout higher which saves battery but can potentially cause data loss if your computer loses all power.  Since laptops run on AC AND battery, this isn't a big deal since you would need to lose both; but, if it's concerning to you you can manually turn that tweak to `off` which will set it to `Bad`.  Use the next section below to do that.
+
 
 ### Apply PowerTOP Tweaks Automatically at Startup
 If all is working then we need to set PowerTOP to run at startup as root.  The easiest way to do that is to edit `/etc/rc.local` which by default does nothing and it will tell you that.  Run
