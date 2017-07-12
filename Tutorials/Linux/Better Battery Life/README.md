@@ -1,7 +1,7 @@
-OS: Debian, Debian based, Ubuntu, Ubuntu based
-Hardware: Must be laptop computer
-Difficulty: Easy to medium
-Last Tested: Ubuntu 16.04 LTS
+- OS: Debian, Debian based, Ubuntu, Ubuntu based
+- Hardware: Must be laptop computer
+- Difficulty: Easy to medium
+- Last Tested: Ubuntu 16.04 LTS
 
 Have you noticed that Linux battery life sucks? I love Linux but it seems to be lacking in this department.  Sure you can install XFCE, LXDE, or even Openbox to cut down the battery usage but that isn’t enough.  I’m going to showcase two programs that will really increase your battery level.  This is not a definitive guide but rather guidelines from personal experience and may or may not work on every laptop. For reference I'm using an HP EliteBook 840 G2. I went from 4 to 5 hours to 6-7.
 
