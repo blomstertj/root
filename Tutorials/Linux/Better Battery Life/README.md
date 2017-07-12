@@ -5,7 +5,7 @@
 
 Have you noticed that Linux battery life sucks? I love Linux but it seems to be lacking in this department.  Sure you can install XFCE, LXDE, or even Openbox to cut down the battery usage but that isn’t enough.  I’m going to showcase two programs that will really increase your battery level.  This is not a definitive guide but rather guidelines from personal experience and may or may not work on every laptop. For reference I'm using an HP EliteBook 840 G2. I went from 4 to 5 hours to 6-7.
 
-TLP should work for all models of laptops and is easy. PowerTOP is one step further and requires more effort. If you want the best battery life check out Watt OS. I hear it is the best but I haven't tried it. 
+TLP should work for all models of laptops and is easy. PowerTOP is one step further and requires more effort. 
 
 ## TLP Installation
 Website: http://linrunner.de/en/tlp/tlp.html also http://www.webupd8.org/2013/04/improve-power-usage-battery-life-in.html .  
