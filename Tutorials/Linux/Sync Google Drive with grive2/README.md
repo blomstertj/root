@@ -41,6 +41,7 @@ To verify that you created the directory you can use:
 
 That should have an output like so:
 
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/create_dir_1.png)
 
 Now let’s go into that directory with the terminal by using:
 
@@ -48,6 +49,7 @@ Now let’s go into that directory with the terminal by using:
 
 Now your terminal line should look like so:
 
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/create_dir_2.png)
 
 ## Running Grive for the First Time
 Now let’s start Grive for the first time.  To do this run:
@@ -56,22 +58,19 @@ Now let’s start Grive for the first time.  To do this run:
 
 You should get an output like so:
 
-
-
-
-
-
-
-
-
-
-
-
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/grive_first_time_1.png)
 
 Right click that link where my black box is and click Open Link.  In your web browser, it’ll bring you to your Google sign in page.  Sign in, review the permissions, and click Allow.  At the next screen right click the code (make sure to highlight it all) and click copy like so:
 
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/grive_first_time_2.png)
+
 Now go to your terminal and right click and click paste like so then press Enter like so:
+
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/grive_first_time_3.png)
+
 Then you should start seeing your files syncing like so:
+
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/grive_first_time_4.png)
 
 After it’s done syncing you can open your File Manager like Files then view the files in the Google Drive folder.  
 
@@ -82,13 +81,17 @@ You can sync grive manually from anywhere using `grive --path “/home/username/
 
 And you’ll receive this output (if never run before):
 
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/schedule_sync_1.png)
+
 Select 2 because it’s the easiest.
 
 You’ll be greeted by this block of text:
 
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/schedule_sync_2.png)
 
 Just use the down arrow key to go to the bottom like so:
 
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/schedule_sync_3.png)
 
 Now type in this (Don’t forget the # symbol and don’t forget to replace ‘username’ with your own username):
 ```
@@ -97,7 +100,9 @@ Now type in this (Don’t forget the # symbol and don’t forget to replace ‘u
 ```
 So it looks like so:
 
-So the first line is just a description of what the next line does for documentation purposes so later if you make your own cron jobs you can see what each is for.  The next line translates to Every 15 minute of every hour of every day of every month of every day of the week sync Grive or Google Drive.  So basically every 15 minutes sync Google Drive to your sync folder.  Then that >/dev/null 2>&1 thing on the end basically makes it so there is no output of the command so you don’t see a terminal window pop up every 15 minutes.
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/schedule_sync_4.png)
+
+So the first line is just a description of what the next line does for documentation purposes so later if you make your own cron jobs you can see what each is for.  The next line translates to Every 15 minute of every hour of every day of every month of every day of the week sync Grive or Google Drive.  So basically every 15 minutes sync Google Drive to your sync folder.  Then `>/dev/null 2>&1` on the end basically makes it so there is no output of the command so you don’t see a terminal window pop up every 15 minutes.
 
 Now press `Control Key and X` then press `Y` then press `Enter` to save.  Then you’ll see this message: `“crontab: installing new crontab”` in your terminal.
 
@@ -108,32 +113,12 @@ You can create a file to sync immediately using a .desktop file.  We can create 
 
 Then save this to anywhere you want.  (I keep it right in my Google Drive folder).  Then right click the file in your file manager and click Properties like so:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/on_demand_sync_1.png)
 
 Now click the Permissons tab and check `“Allow executing file as program”` and then click `Close`
 
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/on_demand_sync_2.png)
 
 Now just double click on this with file and it’ll run in a terminal window then exit when done:
 
-
-
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/on_demand_sync_3.png)
