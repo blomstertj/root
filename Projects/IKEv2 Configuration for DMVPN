@@ -34,7 +34,6 @@ crypto ipsec transform-set TRANS-SET esp-aes 256 esp-sha256-hmac
 crypto ipsec profile IKEV2-DMVPN
  set transform-set TRANS-SET
  set ikev2-profile IKEV2-PROFILE
- set security-association lifetime seconds 900
  exit
 
 
