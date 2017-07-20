@@ -21,7 +21,7 @@ crypto ikev2 keyring DMVPN-KEYRING
 crypto ikev2 profile IKEV2-PROFILE
  match fvrf OUTSIDE-WORLD
  match identity remote any
- identity local A.B.C.D	! IP Address of the Tunnel 0 interface
+ identity local address A.B.C.D	! IP Address of the Tunnel 0 interface
  authentication remote pre-share
  authentication local pre-share
  keyring local DMVPN-KEYRING
