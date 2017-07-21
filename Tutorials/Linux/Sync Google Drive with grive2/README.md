@@ -2,7 +2,6 @@
 - Hardware: Any
 - Difficulty: Medium
 - Last Tested: Ubuntu 16.04 LTS
-### An improved version of the cron job and on demand sync shortcut is in testing currently that will only allow sync if grive is not currently running.  This is helpful if you are syncing a very large file and it takes longer than your configured interval.
 
 ## Description
 If you have a Google Drive account, there are a few methods you can use to sync your Drive files with Linux.  My favorite method is using Grive2, a command line only tool that was forked from Grive that stopped development.  Grive2 project is located here: https://github.com/vitalif/grive2/blob/master/README.md Grive2 is pretty easy to set up and schedule.  I use a cron job to sync in the background at regular intervals.  I’m going to be following the configuration of this webpage: http://www.webupd8.org/2015/05/grive2-grive-fork-with-google-drive.html however I’m going to take another step to make it run automatically so you don’t have to manually do it.  Grive will only sync files that have changed so don’t worry about it syncing everything again.  Google Doc files are not supported, check out overGrive for that: https://www.thefanclub.co.za/overgrive 
@@ -77,7 +76,7 @@ Then you should start seeing your files syncing like so:
 After it’s done syncing you can open your File Manager like Files then view the files in the Google Drive folder.  
 
 ## Scheduling Automatic Sync
-You can sync grive manually from anywhere using `grive --path “/home/username/Google Drive”` so what we’re going to do is create a cron job to run this every 15 (you can change this interval to whatever you want) minutes. If you work with very large files you may want to change the interval to be even longer so it can finishing syncing before the next interval. To accomplish this we can edit your crontab file which is an easy way to make cronjobs.  Run:
+You can sync grive manually from anywhere using `grive --path “/home/username/Google Drive”` so what we’re going to do is create a cron job to run this every 15 (you can change this interval to whatever you want) minutes. We are going to also make it check if Grive is already running before syncing to avoid data loss.  To accomplish this we can edit your crontab file which is an easy way to make cronjobs.  Run:
 
 `crontab -e`
 
@@ -98,13 +97,13 @@ Just use the down arrow key to go to the bottom like so:
 Now type in this (Don’t forget the # symbol and don’t forget to replace ‘username’ with your own username):
 ```
 #Sync Google Drive Every 15 Minutes
-*/15 * * * * grive --path “/home/username/Google Drive” >/dev/null 2>&1
+*/15 * * * * pgrep grive >/dev/null || grive --path "/home/tanner/Google Drive" >/dev/null 2>&1
 ```
 So it looks like so:
 
 ![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/schedule_sync_4.png)
 
-So the first line is just a description of what the next line does for documentation purposes so later if you make your own cron jobs you can see what each is for.  The next line translates to Every 15 minute of every hour of every day of every month of every day of the week sync Grive or Google Drive.  So basically every 15 minutes sync Google Drive to your sync folder.  Then `>/dev/null 2>&1` on the end basically makes it so there is no output of the command so you don’t see a terminal window pop up every 15 minutes.
+So the first line is just a description of what the next line does for documentation purposes so later if you make your own cron jobs you can see what each is for.  The next line is the command to run, the first part determines when to run the following command.  `pgrep grive >/dev/null` will check if grive is already running, then `||` means OR and then `grive --path "/home/tanner/Google Drive" >/dev/null 2>&1` will run grive to sync to your folder.  Combined, this will check if grive is running and if it is, it will quit and not sync then wait until the next interval; but, if it's not running then it will start sync.  This gives us protection against very large files that are syncing or slow internet connections.
 
 Now press `Control Key and X` then press `Y` then press `Enter` to save.  Then you’ll see this message: `“crontab: installing new crontab”` in your terminal.
 
