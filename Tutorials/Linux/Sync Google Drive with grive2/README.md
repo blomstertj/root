@@ -2,7 +2,7 @@
 - Hardware: Any
 - Difficulty: Medium
 - Last Tested: Ubuntu 16.04 LTS
-### An improved version of the cron job and on demand sync shortcut is in testing currently that will only allow sync if grive is not currently running.  
+### An improved version of the cron job and on demand sync shortcut is in testing currently that will only allow sync if grive is not currently running.  This is helpful if you are syncing a very large file and it takes longer than your configured interval.
 
 ## Description
 If you have a Google Drive account, there are a few methods you can use to sync your Drive files with Linux.  My favorite method is using Grive2, a command line only tool that was forked from Grive that stopped development.  Grive2 project is located here: https://github.com/vitalif/grive2/blob/master/README.md Grive2 is pretty easy to set up and schedule.  I use a cron job to sync in the background at regular intervals.  I’m going to be following the configuration of this webpage: http://www.webupd8.org/2015/05/grive2-grive-fork-with-google-drive.html however I’m going to take another step to make it run automatically so you don’t have to manually do it.  Grive will only sync files that have changed so don’t worry about it syncing everything again.  Google Doc files are not supported, check out overGrive for that: https://www.thefanclub.co.za/overgrive 
