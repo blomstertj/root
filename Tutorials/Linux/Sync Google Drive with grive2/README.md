@@ -101,7 +101,7 @@ Now type in this (Don’t forget the # symbol and don’t forget to replace ‘u
 ```
 So it looks like so:
 
-![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/schedule_sync_4.png)
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/schedule_sync_4.PNG)
 
 So the first line is just a description of what the next line does for documentation purposes so later if you make your own cron jobs you can see what each is for.  The next line is the command to run, the first part determines when to run the following command.  `pgrep grive >/dev/null` will check if grive is already running, then `||` means OR and then `grive --path "/home/tanner/Google Drive" >/dev/null 2>&1` will run grive to sync to your folder.  Combined, this will check if grive is running and if it is, it will quit and not sync then wait until the next interval; but, if it's not running then it will start sync.  This gives us protection against very large files that are syncing or slow internet connections.
 
