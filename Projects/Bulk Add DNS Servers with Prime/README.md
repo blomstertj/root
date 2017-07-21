@@ -12,7 +12,7 @@ The checkbox removes all DNS servers currently on the devices BEFORE applying th
 
 ### WHAT THE USER SEES
 
-![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Production/Projects/Bulk%20Add%20DNS%20Servers/form.PNG)
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Projects/Bulk%20Add%20DNS%20Servers%20with%20Prime/dns_serv_form.PNG)
 
 ### FINAL CODE
 ```
