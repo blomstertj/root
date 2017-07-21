@@ -112,7 +112,7 @@ Now press `Control Key and X` then press `Y` then press `Enter` to save.  Then y
 
 You can create a file to sync immediately using a .desktop file.  We can create one by opening your text editor (gedit, mousepad, etc) normally.  Then we can put in (make sure to change the path to reflect your username so /home/joe/Google Drive for example) then save it as `Sync Drive Now.desktop`
 
-![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/on_demand_sync_1.png)
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/on_demand_sync_1.PNG)
 
 Then save this to anywhere you want.  (I keep it right in my Google Drive folder).  Then right click the file in your file manager and click Properties like so:
 
