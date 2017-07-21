@@ -1,4 +1,4 @@
-!! For use with DMPVN and access lists to control the remote identity connections.
+!! For use with DMPVN
 
 crypto ikev2 proposal IKEV2-PROPOSAL
  encryption aes-cbc-256
