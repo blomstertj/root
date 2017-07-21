@@ -1,9 +1,9 @@
-#Create 7GB NTFS volume "Q" on Disk 2
+#Create 7GB NTFS volume "Q" on Disk 2 remotely on Server C
 Invoke-Command -ComputerName ServerC {Initialize-Disk -Number 2}
 Invoke-Command -ComputerName ServerC {New-Partition -DiskNumber 2 -DriveLetter Q -Size 7GB}
 Invoke-Command -ComputerName ServerC {Format-Volume -DriveLetter Q -FileSystem NTFS -confirm:$false}
 
-#Create 6GB exFAT volume "R" on Disk 3
+#Create 6GB exFAT volume "R" on Disk 3 remotely on Server C
 Invoke-Command -ComputerName ServerC {Initialize-Disk -Number 3}
 Invoke-Command -ComputerName ServerC {New-Partition -DiskNumber 3 -DriveLetter R -Size 6GB}
 Invoke-Command -ComputerName ServerC {Format-Volume -DriveLetter R -FileSystem exFAT -confirm:$false}
