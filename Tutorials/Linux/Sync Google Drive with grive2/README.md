@@ -110,7 +110,17 @@ Now press `Control Key and X` then press `Y` then press `Enter` to save.  Then y
 
 ## (Optional) Create an On Demand Sync Shortcut
 
-You can create a file to sync immediately using a .desktop file.  We can create one by opening your text editor (gedit, mousepad, etc) normally.  Then we can put in (make sure to change the path to reflect your username so /home/joe/Google Drive for example) then save it as `Sync Drive Now.desktop`
+You can create a file to sync immediately using a .desktop file.  We can create one by opening your text editor (gedit, mousepad, etc) normally.  Then we can put in:
+```
+[Desktop Entry]
+Type=Application
+Name=Sync Drive Now
+Terminal=true
+Exec=pgrep grive >/dev/null || grive --path "/home/tanner/Google Drive" && exit
+Hidden=false
+```
+
+(make sure to change the path to reflect your username so /home/joe/Google Drive for example) then save it as `Sync Drive Now.desktop`
 
 ![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Linux/Sync%20Google%20Drive%20with%20grive2/on_demand_sync_1.PNG)
 
