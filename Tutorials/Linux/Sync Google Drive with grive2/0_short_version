@@ -1,0 +1,22 @@
+# Installation
+sudo add-apt-repository -y ppa:nilarimogard/webupd8
+sudo apt install grive
+
+# Make directory and start grive for the first time
+cd && mkdir "Google Drive" && cd "Google Drive"
+grive -a
+
+# Set up cron job
+crontab -e
+
+## Job
+#Sync Google Drive Every 15 Minutes
+*/15 * * * * pgrep grive >/dev/null || grive --path "/home/tanner/Google Drive" >/dev/null 2>&1
+
+# Set up on demand sync launcher
+[Desktop Entry]
+Type=Application
+Name=Sync Drive Now
+Terminal=true
+Exec=pgrep grive >/dev/null || grive --path "/home/tanner/Google Drive" && exit
+Hidden=false
