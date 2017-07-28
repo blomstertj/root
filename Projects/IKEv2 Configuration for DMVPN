@@ -1,5 +1,6 @@
 !! For use with DMPVN. 
-!! Because this will accept any outside IP, someone with the same pre shared key and the same settings can and will try to connect to your network.  Make sure to choose a very difficult key and for added protection specifically specify what remote identities are allowed to connect or use an access list to block unauthorized IPs.
+!! Because this will accept any outside IP, someone with the same pre shared key and the same settings can and will try to connect to your network.  
+!! Make sure to choose a very difficult key and for added protection specifically specify what remote identities are allowed to connect or use an access list to block unauthorized IPs.
 
 crypto ikev2 proposal IKEV2-PROPOSAL
  encryption aes-cbc-256
