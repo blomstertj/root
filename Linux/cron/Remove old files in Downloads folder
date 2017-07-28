@@ -1,0 +1,2 @@
+#Remove directories and files in Downloads older than 7 days every Wednesday at 12:55 AM
+55 0 * * Wed find /home/username/Downloads -mtime +7 -delete >/dev/null 2>&1
