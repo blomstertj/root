@@ -1,0 +1,9 @@
+### Make Windows 7 VM run Windows Update on Saturdays
+
+#Start Windows 7 VM in VirtualBox at 2:45AM on Saturday
+45 2 * * Sat vboxmanage startvm --type headless Windows7
+
+#Shutdown Windows 7 VM in VirtualBox at 5:00AM on Saturday.  Need it doubled due to VM not shutting down with only one "button press"
+0 5 * * Sat vboxmanage controlvm Windows7 acpipowerbutton && vboxmanage controlvm Windows7 acpipowerbutton
+
+###
