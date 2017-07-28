@@ -32,9 +32,9 @@ Open a text editor and put in the following:
 Type=Application
 Name=Reboot to Windows
 Terminal=false
-Exec=/home/tanner/bin/RebootWindows10
+Exec=/home/username/bin/RebootWindows10
 Hidden=false
-Icon=/home/tanner/Pictures/Icons/Windows_logo_-_2012.svg.png
+Icon=/home/username/Pictures/Icons/Windows_logo_-_2012.svg.png
 ```
 
 I recommend finding a png icon of the Windows logo like I have done above.  Save this file as `Reboot to Windows 10.desktop` or something similar but make sure `.desktop` is at the end.
