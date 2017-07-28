@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+## This script sets the core clock offset to -23 MHz and the memory clock offset to +150 MHz
+
+
+nvidia-settings -a '[gpu:0]/GPUGraphicsClockOffset[3]=-23' >/dev/null 2>&1
+nvidia-settings -a '[gpu:0]/GPUMemoryTransferRateOffset[3]=150' >/dev/null 2>&1
