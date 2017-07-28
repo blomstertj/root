@@ -1,0 +1,6 @@
+[Unit]
+Description=Optimize pacman database
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/pacman-optimize
