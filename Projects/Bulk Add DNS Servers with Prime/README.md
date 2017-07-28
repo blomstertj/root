@@ -1,5 +1,5 @@
 ### BACKGROUND
-Adding DNS servers to multiple devices can be a long process especially if you have hundreds of network devices.  Using Cisco Prime you can deploy any type of configuration to many devices quickly.
+Adding DNS servers to multiple devices can be a long process if you have hundreds of network devices.  Using Cisco Prime you can deploy any type of configuration to many devices quickly.
 
 ### HOW IT WORKS
 One DNS server is required.
