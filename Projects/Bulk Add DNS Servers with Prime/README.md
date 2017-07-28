@@ -17,10 +17,10 @@ The checkbox removes all DNS servers currently on the devices BEFORE applying th
 ### FINAL CODE
 ```
 #if ( $remove_dns_serv eq "true" )
-		no ip name-server
-	#end
+	no ip name-server
+#end
 ip name-server $dns_serv_1
 #if ( $dns_serv_2 != "" )
-		ip name-server $dns_serv_2
-	#end
+	ip name-server $dns_serv_2
+#end
 ```
