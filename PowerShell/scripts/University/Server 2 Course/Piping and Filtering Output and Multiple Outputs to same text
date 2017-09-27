@@ -1,0 +1,5 @@
+# Get the IP address, exclude the addresses for local host (127.0.0.1 and ::1), format as a table, then send the output to a text file on current server
+Get-NetIPAddress | Where {$_.ifIndex -ne "1"} | Format-Table >> c:/ipinfo.txt
+# Same as above but on Server 02.
+Invoke-Command -ComputerName Server02 {Get-NetIPAddress | Where {$_.ifIndex -ne "1"} | Format-Table} >> c:/ipinfo.txt
+pause
