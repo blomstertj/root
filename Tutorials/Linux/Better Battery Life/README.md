@@ -55,37 +55,26 @@ If all is working after that command great, but check your USB devices, touchpad
 
 
 ### Apply PowerTOP Tweaks Automatically at Startup
-If all is working then we need to set PowerTOP to run at startup as root.  The easiest way to do that is to edit `/etc/rc.local` which by default does nothing and it will tell you that.  Run
+If all is working then we need to set PowerTOP to run at startup as root.  The easiest and most universal way to do this is to use a simple systemd service.
 
-`sudo nano /etc/rc.local`
+In a terminal run
 
-Type in (you can navigate with the arrow keys)
+`sudo nano /etc/systemd/system/powertop.service`
 
-`powertop --auto-tune`
-
-Before the exit 0 like below:
+Put in (source: Arch Wiki)
 ```
-#!/bin/sh -e
-#
-# rc.local
-#
-# This script is executed at the end of each multiuser runlevel.
-# Make sure that the script will "exit 0" on success or any other
-# value on error.
-#
-# In order to enable or disable this script just change the execution
-# bits.
-#
-# By default this script does nothing.
-powertop --auto-tune
-exit 0
+[Unit]
+Description=Powertop tunings
+
+[Service]
+ExecStart=/usr/bin/powertop --auto-tune
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
 ```
-Then press `Control X` then `Y` then Enter to save
 
-You can also edit this using GUI by using 
-
-`sudo gedit /etc/rc.local`
-
+Then press Ctrl + X and Y to save and close this file.  Then run `sudo systemctl enable powertop.service`.  When you reboot this service will automatically run.
 
 ## Fixing a bad tweak after running `sudo powertop --auto-tune`
 
