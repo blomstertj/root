@@ -115,14 +115,10 @@ WantedBy=multi-user.target
 Again, press Ctrl + X then Y to save and close.
 
 ## Verification
-Again, no testing should be necessary with TLP since it’s really straightforward.  With PowerTOP you will have to reboot after saving `/etc/rc.local` and then run
+Again, no testing should be necessary with TLP since it’s really straightforward.  With PowerTOP you will have to reboot after saving `/etc/systemd/system/powertop.service` and then run
 
 `sudo powertop`
 
-When you are back into the Terminal.  Use tab to go to the Tunables section.  If almost everything you have is “Good” then it worked.  My VM Writeback Timeout is “Bad” but that is the only thing that isn’t tuned.  That’s probably being changed by something else for a reason.
-
-If everything is still “Bad” you may have to enable your rc.local service by using
-
-`sudo systemctl enable rc.local.service`
+When you are back into the Terminal.  Use tab to go to the Tunables section.  If almost everything you have is “Good” then it worked.
 
 Then reboot.  If it still doesn’t work right try the Ubuntu forums or other help sites.
