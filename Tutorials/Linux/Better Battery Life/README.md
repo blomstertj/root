@@ -99,26 +99,20 @@ So, in this case, you’ll copy
 
 Remove the ; and the first two >> at the front to get what’s above.  Now go back to your rc.local file by using
 
-`sudo nano /etc/rc.local`
+Add the line you copied to the end of `Exec` with `sudo nano /etc/systemd/system/powertop.service`
+```
+[Unit]
+Description=Powertop tunings
 
-Add that line you copied like so
+[Service]
+ExecStart=/usr/bin/powertop --auto-tune && /usr/bin/echo 'on' > '/sys/bus/usb/devices/2-3/power/control'
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
 ```
-#!/bin/sh -e
-#
-# rc.local
-#
-# This script is executed at the end of each multiuser runlevel.
-# Make sure that the script will "exit 0" on success or any other
-# value on error.
-#
-# In order to enable or disable this script just change the execution
-# bits.
-#
-# By default this script does nothing.
-powertop --auto-tune
-echo 'on' > '/sys/bus/usb/devices/2-3/power/control'
-exit 0
-```
+
+Again, press Ctrl + X then Y to save and close.
 
 ## Verification
 Again, no testing should be necessary with TLP since it’s really straightforward.  With PowerTOP you will have to reboot after saving `/etc/rc.local` and then run
