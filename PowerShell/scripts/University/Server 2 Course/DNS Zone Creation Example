@@ -1,0 +1,24 @@
+#Add Primary Zone 123.com on RWDC01
+Add-DnsServerPrimaryZone -Name 123.com -ZoneFile 123.com.dns
+
+#Add primary zone 456.com on Server01 and allow updates to RWDC01
+Add-DnsServerPrimaryZone -Name 456.com -ZoneFile 456.com.dns -ComputerName Server01
+
+#Ensure RWDC01 (192.168.1.50) can replicate the zone
+Set-DnsServerPrimaryZone -Name 456.com -Notify NotifyServers -NotifyServers 192.168.1.50 -ComputerName Server01
+Set-DnsServerPrimaryZone -Name 456.com -SecondaryServers 192.168.1.50 -SecureSecondaries TransferToSecureServers -ComputerName Server01
+
+#Add secondary zone 456.com on RWDC01
+Add-DnsServerSecondaryZone -MasterServers 192.168.1.60 -Name 456.com -ZoneFile 456.com.dns
+
+#Add AD zone fall.com on RWDC01
+Add-DnsServerPrimaryZone -Name fall.com -ReplicationScope Domain
+
+#Add DNS records
+Add-DnsServerResourceRecordA -IPv4Address 192.168.1.255 -Name Computer01 -ZoneName 123.com
+Add-DnsServerResourceRecordA -IPv4Address 192.168.1.222 -Name Server01 -ZoneName 123.com
+Add-DnsServerResourceRecordA -IPv4Address 10.16.21.174 -Name Computer02 -ZoneName 456.com -ComputerName Server01
+Add-DnsServerResourceRecordA -IPv4Address 192.168.5.45 -Name Computer03 -ZoneName fall.com
+Add-DnsServerResourceRecordMX -MailExchange server01.123.com -Name email -Preference 10 -ZoneName 123.com
+Add-DnsServerResourceRecordCName -HostNameAlias computer02.456.com -Name SuperComputer -ZoneName 456.com -ComputerName Server01
+Add-DnsServerResourceRecordCName -HostNameAlias computer03.fall.com -Name SuperSecretComputer -ZoneName fall.com
