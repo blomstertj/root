@@ -1,0 +1,6 @@
+Run sudo nano /etc/default/grub
+
+Make sure GRUB_GFXMODE is uncommented
+
+Append your normal screen resolution to it but verify this resolution will work by running vbeinfo
+GRUB_GFXMODE=1920x1080
