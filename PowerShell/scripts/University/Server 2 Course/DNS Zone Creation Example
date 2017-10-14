@@ -14,7 +14,7 @@ Add-DnsServerSecondaryZone -MasterServers 192.168.1.60 -Name 456.com -ZoneFile 4
 #Add AD zone fall.com on RWDC01
 Add-DnsServerPrimaryZone -Name fall.com -ReplicationScope Domain
 
-#Add DNS records
+#Add sample DNS records
 Add-DnsServerResourceRecordA -IPv4Address 192.168.1.255 -Name Computer01 -ZoneName 123.com
 Add-DnsServerResourceRecordA -IPv4Address 192.168.1.222 -Name Server01 -ZoneName 123.com
 Add-DnsServerResourceRecordA -IPv4Address 10.16.21.174 -Name Computer02 -ZoneName 456.com -ComputerName Server01
