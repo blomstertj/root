@@ -26,6 +26,9 @@ PasswordAuthentication yes
 
 and change `PasswordAuthentication yes` to `PasswordAuthentication no`
 
+Restart the ssh service for the configuration to take effect
+`sudo systemctl restart sshd`
+
 
 # Verification
 To test run ssh as you normally would and see if you get prompted for a password.
