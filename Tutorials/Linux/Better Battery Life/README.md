@@ -105,7 +105,8 @@ Add the line you copied to the end of `Exec` with `sudo nano /etc/systemd/system
 Description=Powertop tunings
 
 [Service]
-ExecStart=/usr/bin/powertop --auto-tune && /usr/bin/echo 'on' > '/sys/bus/usb/devices/2-3/power/control'
+ExecStart=/usr/bin/powertop --auto-tune
+ExecStart=/usr/bin/echo 'on' > '/sys/bus/usb/devices/2-3/power/control'
 RemainAfterExit=true
 
 [Install]
