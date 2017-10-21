@@ -5,8 +5,7 @@ Add-DnsServerPrimaryZone -Name 123.com -ZoneFile 123.com.dns
 Add-DnsServerPrimaryZone -Name 456.com -ZoneFile 456.com.dns -ComputerName Server01
 
 #Ensure RWDC01 (192.168.1.50) can replicate the zone
-Set-DnsServerPrimaryZone -Name 456.com -Notify NotifyServers -NotifyServers 192.168.1.50 -ComputerName Server01
-Set-DnsServerPrimaryZone -Name 456.com -SecondaryServers 192.168.1.50 -SecureSecondaries TransferToSecureServers -ComputerName Server01
+Set-DnsServerPrimaryZone -Name 456.com -Notify NotifyServers -NotifyServers 192.168.1.50 -SecondaryServers 192.168.1.50 -SecureSecondaries TransferToSecureServers -ComputerName Server01
 
 #Add secondary zone 456.com on RWDC01
 Add-DnsServerSecondaryZone -MasterServers 192.168.1.60 -Name 456.com -ZoneFile 456.com.dns
