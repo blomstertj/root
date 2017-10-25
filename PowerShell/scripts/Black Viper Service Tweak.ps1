@@ -1,7 +1,9 @@
 # This script applies all BlackViper "Desktop (Tweaked)" service configurations to your machine.  USE WITH CAUTION.
 # http://www.blackviper.com/service-configurations/black-vipers-windows-10-service-configurations/
-# Script requires admin privilegs.  Please make sure the admin function exists on your machine.
-Restart-ScriptAsAdmin
+
+#Elevate to admin
+if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
+
 Set-Service AJRouter -startuptype "disabled"
 Set-Service ALG -startuptype "disabled"
 Set-Service AppMgmt -startuptype "disabled"
