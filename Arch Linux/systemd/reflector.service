@@ -1,5 +1,7 @@
 [Unit]
 Description=Pacman mirrorlist update using the reflector package
+Requires=network-online.target
+After=network-online.target
 
 [Service]
 Type=oneshot
