@@ -1,0 +1,16 @@
+#Verify address is unreachable
+ping 192.168.1.60 -n 2
+
+#Create VPN connection to public server
+Add-VpnConnection -Name testvpn -ServerAddress 192.168.2.1
+
+#Set the VPN to use the Windows login creds.
+Set-VpnConnection -Name testvpn -TunnelType Automatic -UseWinlogonCredential $True
+
+#Connect to the VPN
+rasdial testvpn
+
+#Verify address is reachable
+ping 192.168.1.60
+
+pause
