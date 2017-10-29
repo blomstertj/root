@@ -1,0 +1,7 @@
+[Unit]
+Description=Reboot to Windows 10
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/grub-reboot 2
+ExecStartPost=/usr/bin/reboot
