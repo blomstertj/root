@@ -1,0 +1,6 @@
+[Unit]
+Description=Remove Downloads older than 7 days
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/find /home/tanner/Downloads -mindepth 1 -prune -mtime +7 -execdir gio trash '{}' ';' 
