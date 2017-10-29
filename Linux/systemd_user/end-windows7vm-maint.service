@@ -1,5 +1,5 @@
 [Unit]
-Description=End Windows 7 VM 3 AM on Monday
+Description=End Windows 7 VM 5 AM on Monday
 
 [Service]
 Type=oneshot
