@@ -1,0 +1,9 @@
+[Unit]
+Description=End Windows 7 VM 5 AM on Monday
+
+[Timer]
+OnCalendar=Mon *-*-* 05:00:00 America/Chicago
+Persistent=true
+
+[Install]
+WantedBy=timers.target
