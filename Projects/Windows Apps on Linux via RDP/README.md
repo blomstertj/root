@@ -38,6 +38,7 @@ If on another distribution visit their website for instructions: https://www.zer
 
 With pacaur:
 `pacaur -S zerotier-one`
+
 Manual way:
 ```git clone https://aur.archlinux.org/zerotier-one.git
 cd zerotier-one
