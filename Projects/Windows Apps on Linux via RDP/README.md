@@ -1,7 +1,8 @@
 WIP
 
-### Server OS/VM Setup
-Setting up our Windows VM in VirtualBox
+## Server OS/VM Setup
+
+### Setting up our Windows VM in VirtualBox
 
 Get a Windows 7 ISO
 
@@ -32,6 +33,9 @@ Hint: use Control + Alt + Delete when manually logging in to the VM from now on 
 
 #### Shut down the VM and create a port forwarding rule to forward 3389 (RDP port) to the VM:
 WIP
+
+
+### Setting up the host OS
 
 #### Install zerotier on your host OS, in my case Arch Linux
 If on another distribution visit their website for instructions: https://www.zerotier.com/download.shtml
@@ -72,4 +76,5 @@ WIP
 
 `ssh-keygen -t rsa -b 4096`
 
-### Client setup
+
+## Client setup
