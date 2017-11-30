@@ -1,6 +1,6 @@
 WIP
 
-#Server OS/VM Setup
+### Server OS/VM Setup
 Setting up our Windows VM in VirtualBox
 
 Get a Windows 7 ISO
@@ -60,4 +60,4 @@ Set up ssh server, install openssh if you don't have it, on Arch it's
 Create your ssh keys
 `ssh-keygen -t rsa -b 4096`
 
-#Client setup
+### Client setup
