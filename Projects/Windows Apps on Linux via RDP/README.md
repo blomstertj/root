@@ -52,10 +52,6 @@ makepkg -si
 Create a network on ZeroTier website:
 WIP
 
-#### Join network on host machine:
-
-`sudo zerotier-one join #######`
-
 #### Allow zerotier through your firewall
 
 `sudo ufw allow 9993/udp`
@@ -63,6 +59,10 @@ WIP
 #### Allow all traffic on the new zt0 adapter
 
 `sudo ufw allow in on zt0`
+
+#### Join network on host machine:
+
+`sudo zerotier-one join #######`
 
 #### Set up ssh server, install openssh if you don't have it, on Arch it's
 
