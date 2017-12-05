@@ -66,6 +66,19 @@ Go to the ZeroTier Central and go in your network and allow the computer to join
 
 ## Client setup
 
+#### Install zerotier on your host OS, in my case Arch Linux
+If on another distribution visit their website for instructions: https://www.zerotier.com/download.shtml
+
+With pacaur:
+`pacaur -S zerotier-one`
+
+Manual way:
+```
+git clone https://aur.archlinux.org/zerotier-one.git
+cd zerotier-one
+makepkg -si
+```
+
 #### Enable the ZeroTier systemd service:
 
 `sudo systemctl enable zerotier-one.service && sudo systemctl start zerotier-one.service`
