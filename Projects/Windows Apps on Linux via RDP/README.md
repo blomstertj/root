@@ -42,7 +42,7 @@ Example:
 
 `sudo ufw allow 9993/udp`
 
-#### Allow all traffic on the new zt0 adapter
+#### Allow all traffic on the new zt0 adapter (you don't have to allow all but for this project we need at least SSH port and RDP ports allowed through)
 
 `sudo ufw allow in on zt0`
 
