@@ -97,6 +97,7 @@ Verify you can ssh to the server without a password
 #### Disable plain-text password authentication -- this will only allow keys the server knows about to connect (turn this off to add new clients then turn it back on)
 
 `sudo nano /etc/ssh/sshd_config`
+
 Find this portion:
 ```
 # To disable tunneled clear text password, change to no here!
