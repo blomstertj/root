@@ -46,7 +46,7 @@ Example:
 
 `sudo ufw allow in on zt0`
 
-#### Join network on host machine:
+#### Join network:
 
 `sudo zerotier-one join #######`
 
@@ -76,7 +76,7 @@ Example:
 
 `sudo ufw allow in on zt0`
 
-#### Join network on host machine:
+#### Join network:
 
 `sudo zerotier-one join #######`
 
