@@ -26,8 +26,11 @@ makepkg -si
 #### Install appetizer from http://appetizer.cozic.net/download
 #### Install seamlessrdp shell (you need to give them email to get a download link unfortunately) from here: https://www.cendio.com/thinlinc/download/registration
 
-Configure registry to use seamlessrdp shell instead of explorer.exe:
-WIP
+### Configure registry to use seamlessrdp shell instead of explorer.exe:
+Open regedit and navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon.  Change Shell from “explorer.exe” to “C:\Program Files\ThinLinc\WTSTools\seamlessrdpshell.exe”
+
+### Configure registry to allow any program to be a remote app
+Open regedit and navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services and create a new DWORD value named !fAllowUnlistedRemotePrograms.  Set its value to 1.
 
 Hint: use Control + Alt + Delete when manually logging in to the VM from now on and use task manager to launch apps
 
