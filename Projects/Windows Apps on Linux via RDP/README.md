@@ -50,6 +50,8 @@ Example:
 
 `sudo zerotier-one join #######`
 
+Go to the ZeroTier Central and go in your network and allow the computer to join.  Verify it gets an IP address via the web GUI or use `ip addr | grep zt0`
+
 #### Set up ssh server, install openssh if you don't have it, on Arch it's
 
 `sudo pacman -S openssh`
