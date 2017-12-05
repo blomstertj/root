@@ -11,7 +11,8 @@ With pacaur:
 `pacaur -S virtualbox-ext-oracle`
 
 Manual way:
-```sudo pacman -S git
+```
+sudo pacman -S git
 git clone https://aur.archlinux.org/virtualbox-ext-oracle.git
 cd virtualbox-ext-oracle
 makepkg -si
@@ -24,7 +25,8 @@ With pacaur:
 `pacaur -S zerotier-one`
 
 Manual way:
-```git clone https://aur.archlinux.org/zerotier-one.git
+```
+git clone https://aur.archlinux.org/zerotier-one.git
 cd zerotier-one
 makepkg -si
 ```
