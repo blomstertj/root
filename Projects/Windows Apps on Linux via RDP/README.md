@@ -1,4 +1,4 @@
-This tutorial assumes you have good prerequisite knowledge about Linux and Windows.  At the end of this tutorial, you will be able to display any application installed on your VM to any guest using RDP.  Applications that require high bandwidth and lots of graphics are a bad idea; but, applicaitons like Microsoft Word work great though.
+This tutorial assumes you have good prerequisite knowledge about Linux and Windows.  At the end of this tutorial, you will be able to display any application installed on your VM to any guest using RDP.  Applications that require high bandwidth and lots of graphics are a bad idea; but, applicaitons like Microsoft Word work great though.  Adapted from this guide: http://tech.poweredbyorphans.net/natively-run-windows-applications-on-linux-with-seamlessrdp-and-rdesktop/
 
 ## Host/server setup
 
@@ -66,7 +66,7 @@ Go to the ZeroTier Central and go in your network and allow the computer to join
 
 ## Client setup
 
-#### Install zerotier on your host OS, in my case Arch Linux
+#### Install zerotier on your client OS, in my case Arch Linux
 If on another distribution visit their website for instructions: https://www.zerotier.com/download.shtml
 
 With pacaur:
