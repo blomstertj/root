@@ -90,6 +90,7 @@ Example:
 
 #### Copy the key to the server so you do not need to enter a password (this will help our script later and will be convenient for remote administration)
 `ssh-copy-id username@zt-ipaddr`
+
 Verify you can ssh to the server without a password
 
 ## Final Server setup
