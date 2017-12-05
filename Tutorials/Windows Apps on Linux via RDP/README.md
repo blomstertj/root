@@ -132,8 +132,7 @@ Restart the sshd service
 
 ## VM Setup
 
-
-### Setting up our Windows VM in VirtualBox
+#### Setting up our Windows VM in VirtualBox
 
 Get a Windows 7 ISO
 
