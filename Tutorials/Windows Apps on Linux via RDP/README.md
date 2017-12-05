@@ -32,7 +32,9 @@ makepkg -si
 ```
 
 #### Set up and configure ZeroTier on the web.  I recommend private network and a manually creating a subnet instead of IPv4 Auto-Assign.
-Example:
+
+Example: 
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Windows%20Apps%20on%20Linux%20via%20RDP/ZT_Sample_network.png)
 
 #### Enable the ZeroTier systemd service:
 
@@ -152,4 +154,9 @@ Hint: use Control + Alt + Delete when manually logging in to the VM from now on 
 
 #### Shut down the VM and create a port forwarding rule to forward 3389 (RDP port) to the VM:
 
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Windows%20Apps%20on%20Linux%20via%20RDP/virtualbox_win7_network.png)
+
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Windows%20Apps%20on%20Linux%20via%20RDP/virtualbox_win7_network_port_forward.png)
+
+## Create script to start VM then start appetizer launcher to show on client via rdesktop
 
