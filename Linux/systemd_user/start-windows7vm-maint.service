@@ -3,4 +3,4 @@ Description=Start Windows 7 VM 3 AM on Monday
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/vboxmanage startvm --type headless Windows7
+ExecStart=/usr/bin/vboxheadless -s Windows7
