@@ -169,6 +169,9 @@ Hint: use Control + Alt + Delete when manually logging in to the VM from now on 
 Sourced from: http://tech.poweredbyorphans.net/natively-run-windows-applications-on-linux-with-seamlessrdp-and-rdesktop/
 
 ```
+#!/bin/bash
+ssh user@linux-host vboxheadless -s 'vm-name' &
+sleep 2
 rdesktop \
   -A 'C:\Program Files\ThinLinc\WTSTools\seamlessrdpshell.exe' \
   -s 'C:\Program Files (x86)\Appetizer\Appetizer.exe' \
