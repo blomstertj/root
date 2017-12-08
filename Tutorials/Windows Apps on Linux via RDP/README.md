@@ -141,6 +141,8 @@ Get a Windows 7 ISO
 #### Install appetizer from http://appetizer.cozic.net/download
 #### Install seamlessrdp shell (you need to give them email to get a download link unfortunately) from here: https://www.cendio.com/thinlinc/download/registration
 
+Install the shell by extracting the zip and running the install in `windows-tools` on the VM.
+
 #### Configure Appetizer with the shortcuts you want.  I recommend creating a folder of all the shortcuts and importing it.
 
 ### Enable Remote Assistance
