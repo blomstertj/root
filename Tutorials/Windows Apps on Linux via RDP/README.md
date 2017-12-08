@@ -166,3 +166,19 @@ Hint: use Control + Alt + Delete when manually logging in to the VM from now on 
 
 ## Create script to start VM then start appetizer launcher to show on client via rdesktop
 
+Sourced from: http://tech.poweredbyorphans.net/natively-run-windows-applications-on-linux-with-seamlessrdp-and-rdesktop/
+
+```
+rdesktop \
+  -A 'C:\Program Files\ThinLinc\WTSTools\seamlessrdpshell.exe' \
+  -s 'C:\Program Files (x86)\Appetizer\Appetizer.exe' \
+  -r disk:home=$HOME \
+  -r clipboard:PRIMARYCLIPBOARD \
+  -u <username> \
+  -p '<password>' \
+  -d <domain> \
+  -N \
+  -P \
+  -x l \
+  <hostname>
+  ```
