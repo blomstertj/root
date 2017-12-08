@@ -143,6 +143,9 @@ Get a Windows 7 ISO
 
 #### Configure Appetizer with the shortcuts you want.  I recommend creating a folder of all the shortcuts and importing it.
 
+### Enable Remote Assistance
+Navigate to Start > Right Click Computer > Properties > Advanced System Settings > Remote Connections > Check Enable.  Then check "Allow any remote connection (unsecure)".  Then open Local Policy Editor by na
+
 #### Configure registry to use seamlessrdp shell instead of explorer.exe:
 Open regedit and navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon.  Change Shell from “explorer.exe” to “C:\Program Files\ThinLinc\WTSTools\seamlessrdpshell.exe”
 
