@@ -173,8 +173,8 @@ Sourced from: http://tech.poweredbyorphans.net/natively-run-windows-applications
 
 ```
 #!/bin/bash
-ssh user@linux-host vboxheadless -s 'vm-name' &
-sleep 2
+ssh user@linux-host vboxheadless -s 'vm-name' & disown
+sleep 7
 rdesktop \
   -A 'C:\Program Files\ThinLinc\WTSTools\seamlessrdpshell.exe' \
   -s 'C:\Program Files (x86)\Appetizer\Appetizer.exe' \
