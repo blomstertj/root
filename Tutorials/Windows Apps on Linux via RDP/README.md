@@ -1,5 +1,8 @@
 This tutorial assumes you have good prerequisite knowledge about Linux and Windows.  At the end of this tutorial, you will be able to display any application installed on your VM to any guest using RDP.  Applications that require high bandwidth and lots of graphics are a bad idea; but, applicaitons like Microsoft Word work great though.  Adapted from this guide: http://tech.poweredbyorphans.net/natively-run-windows-applications-on-linux-with-seamlessrdp-and-rdesktop/
 
+## End Result
+![alt text](https://raw.githubusercontent.com/blomstertj/root/master/Tutorials/Windows%20Apps%20on%20Linux%20via%20RDP/final_result.png)
+
 ## Host/server setup
 
 #### Install VirtualBox on your host OS, in my case Arch Linux
