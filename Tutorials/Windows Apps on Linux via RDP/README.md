@@ -53,7 +53,7 @@ Example:
 
 #### Join network:
 
-`sudo zerotier-one join #######`
+`sudo zerotier-cli join #######`
 
 Go to the ZeroTier Central and go in your network and allow the computer to join.  Verify it gets an IP address via the web GUI or use `ip addr | grep zt0`
 
@@ -98,7 +98,7 @@ makepkg -si
 
 #### Join network:
 
-`sudo zerotier-one join #######`
+`sudo zerotier-cli join #######`
 
 Go to the ZeroTier Central and go in your network and allow the computer to join.  Verify it gets an IP address via the web GUI or use `ip addr | grep zt0`
 
